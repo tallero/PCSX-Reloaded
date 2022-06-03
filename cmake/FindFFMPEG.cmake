@@ -38,7 +38,7 @@ MACRO(FFMPEG_FIND varname shortname headername)
             IF(${${varname}_INCLUDE_DIR} STREQUAL "${varname}_INCLUDE_DIR-NOTFOUND")
                 #Desperate times call for desperate measures
                 MESSAGE(STATUS "globbing...")
-                FILE(GLOB_RECURSE ${varname}_INCLUDE_DIR "/ffmpeg*/${headername}")
+                FILE(GLOB_RECURSE ${varname}_INCLUDE_DIR "/ffmpeg3.4/${headername}")
                 MESSAGE(STATUS "found: ${${varname}_INCLUDE_DIR}")
                 IF(${varname}_INCLUDE_DIR)
                     GET_FILENAME_COMPONENT(${varname}_INCLUDE_DIR "${${varname}_INCLUDE_DIR}" PATH)
